@@ -1,0 +1,63 @@
+<app-header></app-header>
+<div class="margin-content">
+  <h3 class="fw-light py-3">Usuários | Cadastro</h3>
+  <form class="row g-3">
+    <div class="col-md-12">
+      <label for="inputEmail4" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="inputEmail4" [(ngModel)]="formUsuario.nome" name="nome" required>
+    </div>
+    <div class="col-2">
+      <label for="inputTelefone" class="form-label">Tel Residencial</label>
+      <input type="text" class="form-control" id="inputTelefone" placeholder="Ex: 12 3413-7462" [(ngModel)]="formUsuario.telefones.residencial" name="residencial" required>
+    </div>
+    <div class="col-2">
+      <label for="inputCelular" class="form-label">Tel Celular</label>
+      <input type="text" class="form-control" id="inputCelular" placeholder="Ex: 12 99136-4606" [(ngModel)]="formUsuario.telefones.celular" name="celular" required>
+    </div>
+    <div class="col-md-4">
+      <label for="inputPassword4" class="form-label">Email</label>
+      <input type="text" class="form-control" id="inputPassword4" placeholder="Ex: marcelo.galvao@foursys.com.br" [(ngModel)]="formUsuario.email" name="email" required>
+    </div>
+    <div class="col-2">
+      <label for="inputAddress" class="form-label">Senha</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="Ex: @Senha123" [(ngModel)]="formUsuario.senha" name="senha" required>
+    </div>
+    <div class="col-md-2">
+      <label for="inputState" class="form-label">Acesso</label>
+      <select id="inputState" class="form-select" [(ngModel)]="formUsuario.acesso" name="acesso" required>
+        <option selected>Selecione...</option>
+        <option value="total">TOTAL</option>
+        <option value="restrito" >RESTRITO</option>
+      </select>
+    </div>
+
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Cep</label>
+      <input type="text" class="form-control" id="inputZip" placeholder="Ex: 12090360" [(ngModel)]="formUsuario.endereco.cep" (blur)="buscaEndereco($event)" name="cep" maxlength="8" required>
+      <small style="color: red; font-style: italic; font-weight: bold;" *ngIf="cepNaoEncontrado">Cep não encontrado</small>
+    </div>
+    <div class="col-10">
+      <label for="inputAddress2" class="form-label">Endereço</label>
+      <input type="text" class="form-control" id="inputAddress2" [(ngModel)]="formUsuario.endereco.logradouro" disabled name="logradouro">
+    </div>
+    <div class="col-md-5">
+      <label for="INputBairro" class="form-label">Bairro</label>
+      <input type="text" class="form-control" id="INputBairro" disabled [(ngModel)]="formUsuario.endereco.bairro" name="bairro">
+    </div>
+    <div class="col-md-5">
+      <label for="inputCity" class="form-label">Cidade</label>
+      <input type="text" class="form-control" id="inputCity" disabled [(ngModel)]="formUsuario.endereco.cidade" name="cidade">
+    </div>
+    <div class="col-md-2">
+      <label for="InputEstado" class="form-label">Estado</label>
+      <input type="text" class="form-control" id="InputEstado" disabled [(ngModel)]="formUsuario.endereco.estado" name="estado">
+    </div>
+
+    <small style="color: red; font-style: italic; font-weight: bold;"  *ngIf="formularioInvalido"> Dados minimos obrigatórios: Nome, Email e Senha</small>
+    <div class="col-12 py-3">
+      <button type="submit" class="btn btn-primary" style="margin-right: 10px;" (click)="goSalvar()" [disabled]="disabledButton">Salvar</button>
+      <button type="submit" class="btn btn-dark" routerLink="/users">Voltar</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

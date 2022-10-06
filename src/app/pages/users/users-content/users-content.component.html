@@ -1,0 +1,39 @@
+<h3 class="fw-light py-3">Usuários cadastrados</h3>
+<div class="botaoCadastrar">
+  <button class="btn btn-primary" (click)="goCadastro()">Cadastrar Novo</button>
+</div>
+<table class="table mb-5">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Tel. Res.</th>
+      <th scope="col">Tel. Cel.</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of usersArray">
+      <th scope="row">{{ item.id }}</th>
+      <td>{{ item.nome }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.telefones.residencial }}</td>
+      <td>{{ item.telefones.celular }}</td>
+      <td width="130">
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+          <button class="btn btn-primary" (click)="goAltera(item.id)"><i class="bi bi-save"></i></button>
+          <button class="btn btn-danger" (click)="goDeleta(item.id)"><i class="bi bi-eraser-fill"></i></button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true" [style.display]="ok">
+  <div class="d-flex">
+    <div class="toast-body">
+      Usuário deletado do sistema!
+    </div>
+  </div>
+</div>

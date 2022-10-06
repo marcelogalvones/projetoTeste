@@ -1,0 +1,140 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Marcelo Galvao",
+      "email": "marcelo.galvao@foursys.com.br",
+      "senha": "123",
+      "acesso": "total",
+      "telefones": {
+        "residencial": "3413-7462",
+        "celular": "12 991364606"
+      },
+      "endereco": {
+        "cep": "12090360",
+        "logradouro": "Rua Imaculada Conceicao",
+        "bairro": "Campos Eliseos",
+        "cidade": "Taubate",
+        "estado": "Sao Paulo"
+      }
+    },
+    {
+      "id": 2,
+      "nome": "Regiane Galvao",
+      "email": "regiane.galvao@foursys.com.br",
+      "senha": "123",
+      "acesso": "restrito",
+      "telefones": {
+        "residencial": "3413-7462",
+        "celular": "12 991825034"
+      },
+      "endereco": {
+        "cep": "12090360",
+        "logradouro": "Rua Imaculada Conceicao",
+        "bairro": "Campos Eliseos",
+        "cidade": "Taubate",
+        "estado": "Sao Paulo"
+      }
+    }
+  ],
+  "clientes": [
+    {
+      "id": 11,
+      "nome": "João Carlos da Silva",
+      "email": "joao.carlos.silva@foursys.com.br",
+      "telefones": {
+        "residencial": "3413-7462",
+        "comercial": "12 3622-2014,",
+        "celular": "12 991364606"
+      },
+      "endereco": {
+        "cep": "12090360",
+        "logradouro": "Rua Imaculada Conceicao",
+        "bairro": "Campos Eliseos",
+        "cidade": "Taubate",
+        "estado": "Sao Paulo"
+      },
+      "documentos": {
+        "rg": "12.345.678",
+        "cpf": "123.123.123.12"
+      }
+    },
+    {
+      "id": 2,
+      "nome": "Josué Galvao",
+      "email": "joseue.galvao@hotmail.com",
+      "telefones": {
+        "residencial": "3413-7462",
+        "comercial": "12 3622-2014",
+        "celular": "12 991825034"
+      },
+      "endereco": {
+        "cep": "12090360",
+        "logradouro": "Rua Imaculada Conceicao",
+        "bairro": "Campos Eliseos",
+        "cidade": "Taubate",
+        "estado": "Sao Paulo"
+      },
+      "documentos": {
+        "rg": "12.345.678",
+        "cpf": "123.123.123.12"
+      }
+    }
+  ],
+  "produtos": [
+    {
+      "id": 100,
+      "nome": "Marlboro Box",
+      "marca": "Phillip Morris",
+      "tipo": "Cigarro",
+      "preco": 12.25
+    },
+    {
+      "id": 101,
+      "nome": "Free",
+      "marca": "Souza Cruz",
+      "tipo": "Cigarro",
+      "preco": 8.5
+    },
+    {
+      "id": 102,
+      "nome": "LM",
+      "marca": "Souza Cruz",
+      "tipo": "Cigarro",
+      "preco": 12.25
+    },
+    {
+      "nome": "123",
+      "marca": "123",
+      "tipo": "123",
+      "preco": "12",
+      "telefone": {
+        "residencial": "123",
+        "celular": ""
+      },
+      "id": 103
+    },
+    {
+      "nome": "teste",
+      "marca": "teste",
+      "tipo": "tipo teste",
+      "preco": "12",
+      "telefone": {
+        "residencial": "121212",
+        "celular": ""
+      },
+      "id": 104
+    },
+    {
+      "nome": "Produto Teste",
+      "marca": "Marca Teste",
+      "tipo": "Tipo Teste",
+      "preco": "10",
+      "telefone": {
+        "residencial": "12",
+        "celular": ""
+      },
+      "id": 105
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+<div class="centerDiv">
+  <main class="form-signin w-100 m-auto">
+      <div  style="display: flex; justify-content: center;">
+        <img class="mb-4" src="https://www.foursys.com.br/images/logo-foursys2.png" alt=""  height="87">
+      </div>
+      <h1 class="h3 mb-3 my-3 fw-normal">Acesso ao sistema</h1>
+
+      <form>
+        <div class="form-floating my-3">
+          <input type="text" class="form-control" placeholder="name@example.com" [(ngModel)]="formUser.email" name="email">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="formUser.senha" name="senha">
+          <label for="floatingPassword">Password</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary my-3" (click)="login()">Sign in</button>
+      </form>
+      <small *ngIf="isLogged" [style.color]="'red'" [style.font-style]="'italic'">{{ mensagem }}</small>
+  </main>
+</div>

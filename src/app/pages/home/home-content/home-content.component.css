@@ -1,0 +1,6 @@
+.content {
+  overflow-y: hidden;
+  margin-top: -15px;
+  min-height: 500px;
+  width: 100%;
+}
