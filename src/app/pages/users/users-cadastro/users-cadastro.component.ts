@@ -2,7 +2,6 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Users } from '../../../models/users';
-import { NgForm } from '@angular/forms';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({

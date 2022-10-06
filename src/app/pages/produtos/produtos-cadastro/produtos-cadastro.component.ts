@@ -1,8 +1,6 @@
 import { ProdutosService } from './../../../services/produtos.service';
-import { Users } from './../../../models/users';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-produtos-cadastro',
